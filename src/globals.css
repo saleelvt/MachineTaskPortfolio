@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tailwind styles for different UI components */
+.skill-badge {
+  @apply px-4 py-2 rounded-md my-1 mr-2 border border-teal-600 text-teal-600 hover:bg-gradient-to-r from-cyan-500 to-teal-500 hover:text-white;
+}
+
+.icon-style {
+  @apply hover:text-teal-600 cursor-pointer;
+}
+
+.input-text {
+  @apply py-4 px-6 w-full bg-slate-800 focus:outline-none rounded;
+}
+
+.button-style {
+  @apply px-4 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-teal-500 hover:bg-gradient-to-l capitalize;
+}
+
+.div-h1 {
+  @apply text-center text-2xl pb-2 pt-5 font-semibold uppercase;
+}
+
+.project-div {
+  @apply lg:grid lg:grid-cols-2 pt-10;
+}
+
+.project-h2 {
+  @apply text-xl text-gray-500 font-bold;
+}
+
+.project-p {
+  @apply my-5 lg:pr-10 text-gray-600 lg:text-lg;
+}
+
+.project-img {
+  @apply rounded-lg hover:shadow-2xl duration-75 cursor-pointer;
+}
+
+.project-button-no-bg {
+  @apply px-4 py-2 h-fit mt-0 flex items-center rounded-md my-1 border border-teal-600 text-teal-600 hover:bg-gradient-to-r from-cyan-500 to-teal-500 hover:text-white;
+}

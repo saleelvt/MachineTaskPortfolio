@@ -1,0 +1,77 @@
+/* Spinner styles */
+.spinner {
+    width: 80px; /* Increased size */
+    height: 80px;
+    position: relative;
+    margin: auto; /* Center the spinner */
+    animation: spin 1s linear infinite; /* Rotate the entire spinner */
+}
+
+/* Bouncing circles */
+.double-bounce1,.line-animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height for centering */
+    background-color: #f7f7f7; /* Light background */
+  }
+  
+  .line {
+    width: 200px; /* Set the width of the line */
+    height: 10px; /* Set the height of the line */
+    background-color: #00bcd4; /* Line color */
+    border-radius: 5px; /* Initial rounding */
+    animation: lineRound 2s ease-in-out infinite; /* Animation */
+  }
+  
+  @keyframes lineRound {
+    0%, 100% {
+      border-radius: 5px; /* Initial rounding */
+      transform: scaleX(1); /* Full scale */
+    }
+    50% {
+      border-radius: 30px; /* More rounding */
+      transform: scaleX(1.1); /* Slightly increase width */
+    }
+  }
+  
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* First circle color */
+.double-bounce1 {
+    background: linear-gradient(135deg, #00bcd4, #009688); /* Cyan to teal gradient */
+}
+
+/* Second circle color and animation delay */
+.double-bounce2 {
+    background: linear-gradient(135deg, #b0bec5, #90a4ae); /* Gray to light gray gradient */
+    animation-delay: -0.75s; /* Adjust delay for a smoother bounce */
+}
+
+/* Keyframe animations for bouncing and rotation */
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
